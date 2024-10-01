@@ -1,0 +1,146 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f8338c7b-dc37-4735-9bf8-45e946530da2</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>CSE535SmartHomeProjectPart2</Name>
+    <RootNamespace>CSE535SmartHomeProjectPart2</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="frameextractor.py" />
+    <Compile Include="handshape_feature_extractor.py" />
+    <Compile Include="main.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="test\" />
+    <Folder Include="traindata\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="test\T1-H-0.mp4" />
+    <Content Include="test\T1-H-1.mp4" />
+    <Content Include="test\T1-H-2.mp4" />
+    <Content Include="test\T1-H-3.mp4" />
+    <Content Include="test\T1-H-4.mp4" />
+    <Content Include="test\T1-H-5.mp4" />
+    <Content Include="test\T1-H-6.mp4" />
+    <Content Include="test\T1-H-7.mp4" />
+    <Content Include="test\T1-H-8.mp4" />
+    <Content Include="test\T1-H-9.mp4" />
+    <Content Include="test\T1-H-DecreaseFanSpeed.mp4" />
+    <Content Include="test\T1-H-FanOff.mp4" />
+    <Content Include="test\T1-H-FanOn.mp4" />
+    <Content Include="test\T1-H-IncreaseFanSpeed.mp4" />
+    <Content Include="test\T1-H-LightOff.mp4" />
+    <Content Include="test\T1-H-LightOn.mp4" />
+    <Content Include="test\T1-H-SetThermo.mp4" />
+    <Content Include="test\T2-H-0.mp4" />
+    <Content Include="test\T2-H-1.mp4" />
+    <Content Include="test\T2-H-2.mp4" />
+    <Content Include="test\T2-H-3.mp4" />
+    <Content Include="test\T2-H-4.mp4" />
+    <Content Include="test\T2-H-5.mp4" />
+    <Content Include="test\T2-H-6.mp4" />
+    <Content Include="test\T2-H-7.mp4" />
+    <Content Include="test\T2-H-8.mp4" />
+    <Content Include="test\T2-H-9.mp4" />
+    <Content Include="test\T2-H-DecreaseFanSpeed.mp4" />
+    <Content Include="test\T2-H-FanOff.mp4" />
+    <Content Include="test\T2-H-FanOn.mp4" />
+    <Content Include="test\T2-H-IncreaseFanSpeed.mp4" />
+    <Content Include="test\T2-H-LightOff.mp4" />
+    <Content Include="test\T2-H-LightOn.mp4" />
+    <Content Include="test\T2-H-SetThermo.mp4" />
+    <Content Include="test\T3-H-0.mp4" />
+    <Content Include="test\T3-H-1.mp4" />
+    <Content Include="test\T3-H-2.mp4" />
+    <Content Include="test\T3-H-3.mp4" />
+    <Content Include="test\T3-H-4.mp4" />
+    <Content Include="test\T3-H-5.mp4" />
+    <Content Include="test\T3-H-6.mp4" />
+    <Content Include="test\T3-H-7.mp4" />
+    <Content Include="test\T3-H-8.mp4" />
+    <Content Include="test\T3-H-9.mp4" />
+    <Content Include="test\T3-H-DecereaseFanSpeed.mp4" />
+    <Content Include="test\T3-H-FanOff.mp4" />
+    <Content Include="test\T3-H-FanOn.mp4" />
+    <Content Include="test\T3-H-IncreaseFanSpeed.mp4" />
+    <Content Include="test\T3-H-LightOff.mp4" />
+    <Content Include="test\T3-H-LightOn.mp4" />
+    <Content Include="test\T3-H-SetThermo.mp4" />
+    <Content Include="traindata\FANDOWN_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\FANDOWN_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\FANDOWN_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\FANOFF_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\FANOFF_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\FANOFF_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\FANON_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\FANON_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\FANON_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\FANUP_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\FANUP_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\FANUP_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\LIGHTOFF_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\LIGHTOFF_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\LIGHTOFF_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\LIGHTON_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\LIGHTON_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\LIGHTON_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM0_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM0_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM0_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM1_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM1_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM1_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM2_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM2_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM2_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM3_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM3_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM3_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM4_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM4_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM4_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM5_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM5_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM5_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM6_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM6_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM6_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM7_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM7_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM7_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM8_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM8_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM8_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\NUM9_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\NUM9_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\NUM9_PRACTICE_3_AKHTAR.mp4" />
+    <Content Include="traindata\SETTHERMO_PRACTICE_1_AKHTAR.mp4" />
+    <Content Include="traindata\SETTHERMO_PRACTICE_2_AKHTAR.mp4" />
+    <Content Include="traindata\SETTHERMO_PRACTICE_3_AKHTAR.mp4" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
