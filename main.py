@@ -1,4 +1,4 @@
-
+# main.py
 
 # -*- coding: utf-8 -*-
 """
@@ -12,7 +12,7 @@ import os
 import tensorflow as tf
 from handshape_feature_extractor import HandShapeFeatureExtractor
 from frameextractor import frameExtractor
-from scipy.spatial.distance import cosine  # For cosine similarity
+from scipy.spatial.distance import cosine
 import csv
 
 # Initialize HandShapeFeatureExtractor
@@ -20,7 +20,7 @@ feature_extractor = HandShapeFeatureExtractor.get_instance()
 
 # Paths to gesture videos
 training_videos_path = 'traindata'  # Change to the correct path for your training videos
-test_videos_path = 'test'  # Path to test videos (adjust as needed)
+test_videos_path = 'testdata'  # Path to test videos (adjust as needed)
 frames_output_path_train = 'frames_output_train'  # Directory to save extracted frames for training
 frames_output_path_test = 'frames_output_test'  # Directory to save extracted frames for test
 
@@ -70,10 +70,15 @@ extract_features_from_videos(test_videos_path, frames_output_path_test, test_fea
 # Recognize the gesture (use cosine similarity for comparing the vectors)
 # =============================================================================
 def recognize_gesture(test_vector, training_vectors):
+    # Flatten the test vector to ensure it is 1-D
+    test_vector = np.array(test_vector).flatten()
+    
     # Calculate cosine similarity between test vector and all training vectors
-    similarities = [cosine(test_vector, train_vector) for train_vector in training_vectors]
+    similarities = [cosine(test_vector, np.array(train_vector).flatten()) for train_vector in training_vectors]
+    
     # Find the index of the minimum cosine distance
     recognized_gesture_idx = np.argmin(similarities)
+    
     return recognized_gesture_idx
 
 # List to store recognized gestures
@@ -97,4 +102,5 @@ with open('Results.csv', mode='w', newline='') as file:
         writer.writerow([gesture])
 
 print("Task 3 completed successfully!")
+
 
