@@ -1,4 +1,4 @@
-# main.py
+git# main.py
 
 # -*- coding: utf-8 -*-
 """
@@ -20,7 +20,7 @@ feature_extractor = HandShapeFeatureExtractor.get_instance()
 
 # Paths to gesture videos
 training_videos_path = 'traindata'  # Change to the correct path for your training videos
-test_videos_path = 'testdata'  # Path to test videos (adjust as needed)
+test_videos_path = 'test'  # Path to test videos (adjust as needed)
 frames_output_path_train = 'frames_output_train'  # Directory to save extracted frames for training
 frames_output_path_test = 'frames_output_test'  # Directory to save extracted frames for test
 
