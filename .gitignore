@@ -3,3 +3,7 @@
 .vs/
 *.vsidx
 *.vscode/
+
+# Ignore virtual environments
+env1/
+
